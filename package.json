@@ -3,6 +3,7 @@
 	"description": "send text/html emails and attachments (files, streams and strings) from node.js to any smtp server",
 	"version": "4.0.3",
 	"author": "eleith",
+	"main": "/dist/email.js",
 	"contributors": [
 		"izuzak",
 		"Hiverness",
@@ -12,7 +13,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "http://github.com/eleith/emailjs.git"
+		"url": "http://github.com/tomflorentin/emailjs.git"
 	},
 	"type": "module",
 	"devDependencies": {
@@ -59,7 +60,7 @@
 		"default": "./email.js"
 	},
 	"scripts": {
-		"build": "rollup -c rollup.config.ts",
+		"build": "tsc --project tsconfig.publish.json",
 		"lint": "eslint *.ts \"+(smtp|test)/*.ts\"",
 		"pretest": "yarn build",
 		"test": "ava"
